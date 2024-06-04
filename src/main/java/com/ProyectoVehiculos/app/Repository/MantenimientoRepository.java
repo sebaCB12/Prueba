@@ -7,7 +7,9 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.ProyectoVehiculos.app.Entity.Mantenimiento;
 
 public interface MantenimientoRepository extends MongoRepository<Mantenimiento, String> {
-
-	   List<Mantenimiento> findByVehiculoId(Long vehiculoId);
+	List<Mantenimiento> findByMecanicoIdAndVehiculoId(String mecanicoId,String vehiculoId);
+	
+	 List<Mantenimiento> findByVehiculoId(String vehiculoId);  // Nuevo método añadido
+	
 	
 }

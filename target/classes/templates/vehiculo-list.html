@@ -24,7 +24,15 @@
 </head>
 
 <style>
-	@charset "ISO-8859-1";
+@charset "ISO-8859-1";
+body {
+            background-image: url('/img/fondo2_mecanico.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Roboto Slab', serif;
+        }
+
+	
 /* Estilos para la barra de navegación superior de color azul */
 .navbar-superior {
     background-color: #004899;
@@ -111,7 +119,7 @@ footer {
     <nav class="navbar navbar-expand-lg navbar-dark navbar-superior">
         <div class="container">
             <!-- Logo centrado -->
-            <img src="/img/logo-gov-co.png" alt="Logo" class="logo">
+            <h1>MotorsInc</h1>
         </div>
     </nav>
 
@@ -120,8 +128,9 @@ footer {
         <div class="container">
             <!-- Contenido de la barra de navegación principal -->
             <a class="navbar-brand" href="#">
-                <img src="/img/Logo-icfes.svg" alt="Logo" style="height: 60px; width: 180px;">
+                <img src="/img/Logo.jpg" alt="Logo" style="height: 60px; width: 180px;">
             </a>
+
 
 
 
@@ -134,6 +143,11 @@ footer {
                 <button class="button_list" >
                     <a th:href="@{/mantenimiento/}" style="color: white; text-decoration: none;">
                         <span style="font-size: 120%; padding-left: 5px; padding-right: 5px;">Lista de mantenimiento</span>
+                    </a>
+                </button>
+                 <button class="button_list" >
+                    <a th:href="@{/mecanico/}" style="color: white; text-decoration: none;">
+                        <span style="font-size: 120%; padding-left: 5px; padding-right: 5px;">Lista de Mecanicos</span>
                     </a>
                 </button>
                
@@ -169,7 +183,6 @@ footer {
 						<td><strong>MODELO</strong></td>
 						<td><strong>PLACA</strong></td>
 						<td><strong>PROPIETARIOID</strong></td>
-						<td></td>
 						<td><strong>Editar</strong></td>
 						<td><strong>Eliminar</strong></td>
 					</tr>
@@ -181,11 +194,7 @@ footer {
 						<td>[[ ${vehiculo.modelo} ]]</td>
 						<td>[[ ${vehiculo.placa} ]]</td>
 						<td>[[ ${vehiculo.propietarioId} ]]</td>
-							 <td>
-            <ul>
-                <li th:each="mantenimiento : ${vehiculo.mantenimiento}" th:text="${mantenimiento.mecanicoId}"></li>
-            </ul>
-        </td>				
+										
 						<td>
 							<a class="mx-3 text-success" th:href="@{/vehiculo/edit/{id}(id = ${vehiculo.id})}">
 								<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

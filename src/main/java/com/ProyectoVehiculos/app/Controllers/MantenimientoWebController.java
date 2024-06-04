@@ -1,6 +1,8 @@
 package com.ProyectoVehiculos.app.Controllers;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,37 +11,46 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ProyectoVehiculos.app.Entity.Mantenimiento;
-
+import com.ProyectoVehiculos.app.Entity.Usuario;
 import com.ProyectoVehiculos.app.Exception.NotFoundException;
 import com.ProyectoVehiculos.app.Repository.MantenimientoRepository;
+import com.ProyectoVehiculos.app.Repository.MecanicoRepository;
+import com.ProyectoVehiculos.app.Repository.VehiculoRepository;
 
 
 @Controller
-@RequestMapping(value="/mantenimiento")
-
+@RequestMapping(value="mantenimiento")
 public class MantenimientoWebController {
 
-	@Autowired
+    @Autowired
     private MantenimientoRepository mantenimientoRepository;
+    @Autowired
+    private VehiculoRepository vehiculoRepository;
+    @Autowired
+    private MecanicoRepository mecanicoRepository;
 
     @GetMapping("/")
     public String manteListTemplate(Model model) {
-        model.addAttribute("mantenimiento", mantenimientoRepository.findAll());
+        model.addAttribute("mantenimientos", mantenimientoRepository.findAll());
         return "mantenimiento-list";
     }
 
     @GetMapping("/new")
     public String manteNewTemplate(Model model) {
-        model.addAttribute("mantenimiento", new Mantenimiento());
+        model.addAttribute("mantenimientos", new Mantenimiento());
+        model.addAttribute("vehiculos", vehiculoRepository.findAll());
+        model.addAttribute("mecanicos", mecanicoRepository.findAll());
         return "mantenimiento-form";
     }
 
     @GetMapping("/edit/{id}")
     public String manteEditTemplate(@PathVariable("id") String id, Model model) {
-        model.addAttribute("mantenimiento", mantenimientoRepository.findById(id).orElseThrow(() -> new NotFoundException("mantenimiento no encontrado")));
+        model.addAttribute("mantenimientos", mantenimientoRepository.findById(id).orElseThrow(() -> new NotFoundException("mantenimiento no encontrado")));
+        model.addAttribute("vehiculos", vehiculoRepository.findAll());
+        model.addAttribute("mecanicos", mecanicoRepository.findAll());
         return "mantenimiento-form";
     }
 
@@ -56,9 +67,11 @@ public class MantenimientoWebController {
     public String manteDeleteProcess(@PathVariable("id") String id) {
         mantenimientoRepository.deleteById(id);
         return "redirect:/mantenimiento/";
+    
+      }
+
     }
     
   
   
-	
-}
+
