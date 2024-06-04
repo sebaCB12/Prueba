@@ -4,10 +4,14 @@ C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\Pr
 C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Repository\VehiculoRepository.java
 C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Controllers\LoginTemplateController.java
 C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Repository\MantenimientoRepository.java
+C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Entity\Mecanico.java
 C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Controllers\MantenimientoWebController.java
+C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Controllers\MecanicoWebController.java
+C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Controllers\MecanicoController.java
 C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\ProyectoVehiculosApplication.java
 C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Repository\UsuarioRepository.java
 C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Controllers\VehiculosWebController.java
+C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Repository\MecanicoRepository.java
 C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Controllers\VehiculosController.java
 C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Exception\NotFoundException.java
 C:\Users\SEBAS\Documents\Proyecto_Spring\proyecto_Vehiculos\src\main\java\com\ProyectoVehiculos\app\Controllers\MantenimientoController.java
